@@ -1,7 +1,7 @@
 {
-  "name": "ali-oss",
-  "version": "4.8.0",
-  "description": "aliyun oss(open storage service) node client",
+  "name": "react-native-vk-ali-oss",
+  "version": "1.0.0",
+  "description": "aliyun oss(open storage service) rn client",
   "main": "lib/client.js",
   "files": [
     "lib"
@@ -10,20 +10,11 @@
     "test": "mocha -t 30000 -r thunk-mocha -r should test/*.test.js",
     "test-cov": "istanbul cover node_modules/.bin/_mocha -- -R dot -t 60000 -r thunk-mocha -r should test/*.test.js",
     "jshint": "jshint .",
-    "autod": "autod",
-    "build-dist": "node browser-build.js > dist/aliyun-oss-sdk.js && MINIFY=1 node browser-build.js > dist/aliyun-oss-sdk.min.js",
-    "publish-to-cdn": "node publish.js"
-  },
-  "git-pre-hooks": {
-    "pre-release": "npm run build-dist",
-    "post-release": [
-      "npm publish",
-      "npm run publish-to-cdn"
-    ]
+    "autod": "autod"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/aliyun/oss-nodejs-sdk.git"
+    "url": "git://github.com/react-native-lib/ali-oss.git"
   },
   "keywords": [
     "oss",
@@ -34,7 +25,7 @@
   "author": "dead_horse",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aliyun/oss-nodejs-sdk/issues"
+    "url": "https://github.com/react-native-lib/ali-oss/issues"
   },
   "engines": {
     "node": ">=4"
@@ -52,9 +43,7 @@
     "bluebird": "^3.1.5",
     "browserify": "^13.0.1",
     "co-fs": "^1.2.0",
-    "crypto-browserify": "^1.0.9",
     "filereader": "^0.10.3",
-    "git-pre-hooks": "^1.2.0",
     "istanbul": "^0.4.3",
     "mm": "^2.0.0",
     "mocha": "^3.0.0",
@@ -71,6 +60,7 @@
     "co-defer": "^1.0.0",
     "co-gather": "^0.0.1",
     "copy-to": "^2.0.1",
+    "crypto-browserify": "^3.11.0",
     "dateformat": "^2.0.0",
     "debug": "^2.2.0",
     "destroy": "^1.0.4",
@@ -79,9 +69,13 @@
     "humanize-ms": "^1.2.0",
     "is-type-of": "^1.0.0",
     "merge-descriptors": "^1.0.1",
-    "mime": "^1.3.4",
+    "mime-db": "^1.26.0",
+    "mime-lookup": "^0.0.2",
     "platform": "^1.3.1",
+    "path-browserify":"^0.0.0",
+    "querystring":"^0.2.0",
     "sdk-base": "^2.0.1",
+    "url": "^0.11.0",
     "urllib": "^2.17.1",
     "utility": "^1.8.0",
     "xml2js": "^0.4.16"
